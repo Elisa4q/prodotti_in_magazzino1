@@ -1,0 +1,1 @@
+# prodotti_in_magazzino1
