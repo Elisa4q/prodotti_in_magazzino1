@@ -23,21 +23,20 @@ if($risultato){
     exit();
 }
 
-
 $riga = mysqli_fetch_array($risultato);
 if($riga){
     print "<table border = '1'>";
     print"<tr><td> CODICE </td><td> DESCRIZIONE </td><td> PREZZO </td><td> QUANTITA</td></tr>";
 
     while($riga){
-        print "<tr><td>" .$riga['codice_prodotto']. "</td>";
-        print "<td>" .$riga['descrizione']. "</td>";
-        print "<td>" .$riga['prezzo_unitario']. "</td>";
-        print "<td>" .$riga['quantita']. "</td></tr>";
+        print "<tr><td>".$riga['codice_prodotto']. "</td>";
+        print "<td>".$riga['descrizione']. "</td>";
+        print "<td>".$riga['prezzo_unitario']. "</td>";
+        print "<td>".$riga['quantita']. "</td></tr>";
         $riga = mysqli_fetch_array($risultato);
     }
     print "</table>";
-} else {
+} else{
     print "Attenzione non ci prodotti presenti";
 }
 mysqli_close($conn);
