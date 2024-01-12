@@ -2,7 +2,7 @@ create table prodotti
 (
     codice_prodotto varchar(12) primary key,
     descrizione char(20),
-    prezzzo_unitario decimal(6,2),
+    prezzo_unitario decimal(6,2),
     quantità int
 );
 
