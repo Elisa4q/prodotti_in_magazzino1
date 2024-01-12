@@ -3,11 +3,11 @@ create table prodotti
     codice_prodotto varchar(12) primary key,
     descrizione char(20),
     prezzo_unitario decimal(6,2),
-    quantità int
+    quantita int
 );
 
 
-insert into prodotti (codice_prodotto, descrizione, prezzo_unitario, quantità) values 
+insert into prodotti (codice_prodotto, descrizione, prezzo_unitario, quantita) values 
 ('001', 'Matita', 1, 10),
 ('002', 'Penna', 1.2, 10),
 ('003', 'Gomma', 1. 20),
