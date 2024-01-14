@@ -15,7 +15,7 @@ if(!$conn){
     die("<br><br><strong>Errore nella connessione</strong>");
     exit();
 }
-$query = "select * from prodotti order by prezzzo_unitario";
+$query = "select * from prodotti order by prezzo_unitario";
 $risultato = mysqli_query($conn, $query);
 
 if(!$risultato){
@@ -31,8 +31,8 @@ if($riga){
     while($riga){
         print "<tr><td>".$riga['codice_prodotto']. "</td>";
         print "<td>".$riga['descrizione']. "</td>";
-        print "<td>".$riga['prezzzo_unitario']. "</td>";
-        print "<td>".$riga['quantità']. "</td></tr>";
+        print "<td>".$riga['prezzo_unitario']. "</td>";
+        print "<td>".$riga['quantita']. "</td></tr>";
         $riga=mysqli_fetch_array($risultato);
     }
     print "</table>";
