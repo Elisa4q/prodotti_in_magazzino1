@@ -10,7 +10,7 @@ create table prodotti
 insert into prodotti (codice_prodotto, descrizione, prezzo_unitario, quantita) values 
 ('001', 'Matita', 1, 10),
 ('002', 'Penna', 1.2, 10),
-('003', 'Gomma', 1. 20),
+('003', 'Gomma', 1, 20),
 ('004', 'Temperino', 2, 20),
 ('005', 'Portapenne', 3, 30),
 ('006', 'Quaderno', 1.5, 50),
