@@ -16,7 +16,7 @@ $conn = mysqli_connect($hostname, $username, $password, $dbname);
   }
 //recupera i dati dal form html
 
-$codice_prodotto = $_POST["codice_prodotto"];
+$codice_prodotto = $_POST['codice_prodotto'];
 $query = "select * from prodotti where codice_prodotto = $codice_prodotto";
 $risultato = mysqli_query($conn, $query);
   if(!$risultato)
