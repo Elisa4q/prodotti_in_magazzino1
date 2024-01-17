@@ -5,7 +5,7 @@
         <title>INSERIMENTO NUOVO PRODOTTO</title>
     </head>
     <body>
-        <p>Inserisci i tuoi dati del prodotto:</p>
+        <p>Inserisci i dati del prodotto:</p>
         <form method = "post" action = "form.html">
             codice_prodotto: <input type = "text" value = "inserisci il codice del prodotto" name = "codice_prodotto"> <br><br>
             descrizione: <input type = "text"  value = "inserisci la descrizione del prodotto" name = "descrizione"> <br><br>
