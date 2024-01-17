@@ -10,7 +10,7 @@
             codice_prodotto: <input type = "text" value = "inserisci il codice del prodotto" name = "codice_prodotto"> <br><br>
             descrizione: <input type = "text"  value = "inserisci la descrizione del prodotto" name = "descrizione"> <br><br>
             prezzo_unitario: <input type = "decimal"  value = "inserisci il prezzo unitario" name = "prezzo_unitario"> <br><br>
-            quantita: <input type = "number"  value = "inserisci la quantita dle prodotto" name = "quantita"> <br><br>
+            quantita: <input type = "number"  value = "inserisci la quantita" name = "quantita"> <br><br>
             <br><br>
 
             <input type = "submit" value = "Inserisci"> &nbsp; &nbsp; &nbsp;
