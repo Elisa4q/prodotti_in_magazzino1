@@ -5,17 +5,42 @@
         <title>INSERIMENTO NUOVO PRODOTTO</title>
     </head>
     <body>
-        <p>Inserisci i dati del prodotto:</p>
-        <form method = "post" action = "form.html">
-            codice_prodotto: <input type = "text" value = "inserisci il codice del prodotto" name = "codice_prodotto"> <br><br>
-            descrizione: <input type = "text"  value = "inserisci la descrizione del prodotto" name = "descrizione"> <br><br>
-            prezzo_unitario: <input type = "decimal"  value = "inserisci il prezzo unitario" name = "prezzo_unitario"> <br><br>
-            quantita: <input type = "number"  value = "inserisci la quantita" name = "quantita"> <br><br>
-            <br><br>
+        <?php
+            $hostname = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "prodotti_in_magazzino1";
+            
+            //connessione al server
+        $conn = mysqli_connect($hostname, $username, $password, $dbname);
+        if(!$conn)
+        {
+            die("ERRORE NELLA CONNESSIONE");
+            exit();
+        
+        }
+       //recupero dei dati dal form.html
+        $codice_prodotto = $_POST['codice_prodotto'];
+        $descrizione = $_POST['descrizione'];
+        $prezzo_unitario = $_POST['prezzo_unitario'];
+        $quantita = $_POST['quantita'];
 
-            <input type = "submit" value = "Inserisci"> &nbsp; &nbsp; &nbsp;
-            <input type = "reset" value = "Annulla">
+        $query = "INSERT INTO prodotti(codice_prodotto, descrizione, prezzo_unitario, quantita) VALUES
+        ('$codice_prodotto', '$descrizione', $prezzo_unitario, $quantita)";
 
-        </form>
-    </body>
-</html>
+        $risultato = mysqli_real_query($conn, $query);
+        $righe = mysqli_affected_rows($conn);
+
+        if(!$risultato) {
+            print("Errore nell'inserimento");
+            print("$codice_prodotto, $descrizione, $prezzo_unitario, $quantita");
+            print($query);
+        } else {
+            print("Registrazione avvenuta con successo<br>
+                    sono state inserite $righe");
+        }
+
+mysqli_close($conn);
+?>
+</body>
+</hmtl>
