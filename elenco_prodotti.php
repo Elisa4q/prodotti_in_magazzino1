@@ -44,9 +44,3 @@ mysqli_close($conn);
 </body>
 </hmtl>
  
-
-
-
-?>
-</body>
-</html>
