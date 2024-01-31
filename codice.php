@@ -8,6 +8,9 @@
   $password= "";
   $dbname = "prodotti_in_magazzino1";
 
+
+
+
 //connessione al server sql
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
   if(!$conn){
@@ -41,6 +44,13 @@ $risultato = mysqli_query($conn, $query);
 
 
 
+
+
+if(Username == "")
+{
+  print "Devi prima auteticarti";
+  print "accedi.php"
+};
 
 
 
