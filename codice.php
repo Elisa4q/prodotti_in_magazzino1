@@ -8,9 +8,6 @@
   $password= "";
   $dbname = "prodotti_in_magazzino1";
 
-
-
-
 //connessione al server sql
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
   if(!$conn){
