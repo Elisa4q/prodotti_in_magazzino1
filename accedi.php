@@ -17,9 +17,6 @@ if(!$conn){
 }
 
 
-
- setcookie("Username", $Username, time()+60);
-
  
 
 
