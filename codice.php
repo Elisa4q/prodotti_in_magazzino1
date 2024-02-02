@@ -38,29 +38,4 @@ $risultato = mysqli_query($conn, $query);
 ?>
 </body>
 </hmtl>
-
-
-
-
-
-if(Username == "")
-{
-  print "Devi prima auteticarti";
-  print "accedi.php"
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
