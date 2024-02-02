@@ -10,7 +10,7 @@
 
   <p>&nbsp</p>
   </p>
-    <input type = "submit" value = "visualizza"> &nbsp; &nbsp; &nbsp;
+    <input type = "submit" value = "Visualizza"> &nbsp; &nbsp; &nbsp;
     <input type = "reset" value = "Annulla">
   </form>
   <form method="post" action = "accedi.php" size = "10">
