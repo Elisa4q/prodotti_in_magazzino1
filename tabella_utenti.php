@@ -4,6 +4,12 @@
     <body>
       <p style : "center"><strong>Lista utenti</strong><br><br><br>
 <?php
+
+if(isset($_cookie ['user'])){
+    
+    print 'devi prima autenticarti';
+    print"<br><a href = http://localhost/prodotti_in_magazzino1/tabella_utenti.php> Autenticazione</a>";
+} else {
 $hostname = "localhost";
 $username = "root";
 $password  = "";
@@ -40,6 +46,8 @@ if($riga){
     print "Attenzione utente non trovato";
 }
 mysqli_close($conn);
+    
+}
 ?>
 </body>
 </hmtl>
