@@ -2,7 +2,7 @@
 <html lang = "it">
     <head></head>
     <body>
-      <p style : "center"><strong>Accedere</strong><br><br><br>
+      <p style : "center"><strong>Accesso</strong><br><br><br>
 <?php
 $hostname = "localhost";
 $dbuser = "root";
