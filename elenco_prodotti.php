@@ -4,6 +4,12 @@
     <body>
       <p style : "center"><strong>Lista prodotti</strong><br><br><br>
 <?php
+
+if(isset($_cookie ['user'])){
+    
+    print 'devi prima autenticarti';
+    print"<br><a href = http://localhost/prodotti_in_magazzino1/elenco_prodotti.php> Autenticazione</a>";
+} else {
 $hostname = "localhost";
 $username = "root";
 $password  = "";
@@ -39,7 +45,13 @@ if($riga){
 } else{
     print "Attenzione non ci prodotti presenti";
 }
+
 mysqli_close($conn);
+}
+
+
+
+
 ?>
 </body>
 </hmtl>
