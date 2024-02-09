@@ -20,10 +20,10 @@
         
         }
        //recupero dei dati dal form.html
-        $codice_prodotto = $_POST['codice_prodotto'];
-        $descrizione = $_POST['descrizione'];
-        $prezzo_unitario = $_POST['prezzo_unitario'];
-        $quantita = $_POST['quantita'];
+        $codice_prodotto = $_COOKIE['codice_prodotto'];
+        $descrizione = $_COOKIE['descrizione'];
+        $prezzo_unitario = $_COOKIE['prezzo_unitario'];
+        $quantita = $_COOKIE['quantita'];
 
         $query = "INSERT INTO prodotti(codice_prodotto, descrizione, prezzo_unitario, quantita) VALUES
         ('$codice_prodotto', '$descrizione', $prezzo_unitario, $quantita)";

@@ -2,15 +2,14 @@
 <html lang = "it">
     <head></head>
     <body>
-      <p style : "center"><strong>Lista prodotti</strong><br><br><br>
+      <p style : "center"><strong>Lista utenti</strong><br><br><br>
 <?php
 
 if(isset($_cookie ['user'])){
     
-    print "prima devi autenticarti";
-    print"<br><a href = http://localhost/prodotti_in_magazzino1/eaccedi.php> Autenticazione</a>";
+    print 'devi prima autenticarti';
+    print"<br><a href = http://localhost/prodotti_in_magazzino1/accedi.php> Autenticazione</a>";
 } else {
-
 $hostname = "localhost";
 $username = "root";
 $password  = "";
@@ -22,7 +21,7 @@ if(!$conn){
     die("<br><br><strong>Errore nella connessione</strong>");
     exit();
 }
-$query = "select * from prodotti order by prezzo_unitario";
+$query = "select * from utenti order by Nome";
 $risultato = mysqli_query($conn, $query);
 
 if(!$risultato){
@@ -33,26 +32,22 @@ if(!$risultato){
 $riga=mysqli_fetch_array($risultato);
 if($riga){
     print "<table border = '1'>";
-    print"<tr><td> CODICE </td><td> DESCRIZIONE </td><td> PREZZO </td><td> QUANTITA</td></tr>";
+    print"<tr><td> Nome </td><td> Cognome </td><td> Username </td><td> Password</td></tr>";
 
     while($riga){
-        print "<tr><td>".$riga['codice_prodotto']. "</td>";
-        print "<td>".$riga['descrizione']. "</td>";
-        print "<td>".$riga['prezzo_unitario']. "</td>";
-        print "<td>".$riga['quantita']. "</td></tr>";
+        print "<tr><td>".$riga['Nome']. "</td>";
+        print "<td>".$riga['Cognome']. "</td>";
+        print "<td>".$riga['Username']. "</td>";
+        print "<td>".$riga['Password']. "</td></tr>";
         $riga=mysqli_fetch_array($risultato);
     }
     print "</table>";
 } else{
-    print "Attenzione non ci prodotti presenti";
+    print "Attenzione utente non trovato";
 }
-
 mysqli_close($conn);
+    
 }
-
-
-
-
 ?>
 </body>
 </hmtl>
