@@ -8,7 +8,7 @@
 if(isset($_cookie ['user'])){
     
     print 'devi prima autenticarti';
-    print"<br><a href = http://localhost/prodotti_in_magazzino1/tabella_utenti.php> Autenticazione</a>";
+    print"<br><a href = http://localhost/prodotti_in_magazzino1/accedi.php> Autenticazione</a>";
 } else {
 $hostname = "localhost";
 $username = "root";
