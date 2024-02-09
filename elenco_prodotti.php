@@ -7,9 +7,10 @@
 
 if(isset($_cookie ['user'])){
     
-    print 'devi prima autenticarti';
-    print"<br><a href = http://localhost/prodotti_in_magazzino1/elenco_prodotti.php> Autenticazione</a>";
+    print "prima devi autenticarti";
+    print"<br><a href = http://localhost/prodotti_in_magazzino1/eaccedi.php> Autenticazione</a>";
 } else {
+
 $hostname = "localhost";
 $username = "root";
 $password  = "";
